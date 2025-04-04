@@ -36,6 +36,560 @@ NextJs
 GatsbyJs
 NuxtJs
 
+how to add javascript -->
+InPage javascript
+<script>
+   alert("Welcome everyone");
+</script>
+External file javascript
+alert is global function
+
+datatypes
+primitive data type
+String  -- "this is text message"
+var a = ""this is text message" 
+
+
+Number
+console.log(10,20,30);
+
+
+Boolean = true,false
+test = 10>20
+console.log(test)
+false
+if you want to see in web page  document.write("This is javascript text message<br><br>")
+document.write(1234567890)
+document.write("<h1> This is Heading Text </h1> <br>")
+
+
+Null
+let sampleView = null;
+console.log(sampleView); //null
+
+undefined
+let apple;
+console.log(apple);
+// undefined 
+
+complex data type
+Array
+[] --> Array
+Object
+{
+color : "red" //key pair value
+}
+
+let fruits = ["apple","mango",55,{name:"mouni"}]
+console.log(fruits)
+array -- zero indexed based
+
+const games = {
+  cricket: "Dhoni", //key pair values
+  football: "racer"
+}
+console.log(games)
+console.log(typeof(games))  --//object
+console.log(typeof(fruits)) -- //object
+
+everything in javascript --> is object
+console.log(Array.isArray(fruits)) --true
+
+Operators
+  Airthmetic operators
+  Assignment Operators
+  Comparison Operators
+  Logical Operators
+
+ Airthmetic operators
+1)Addition
+2)Subtraction
+3)Multiplication
+4)Divison
+5)Remainder
+6)Increment
+7)decrement
+
+var a = 30;
+var b = 20;
+document.write(a+b);
+
+var a = 30;
+var b = 20;
+document.write("Result: ",a+b);
+document.write("Result: ",a-b);
+document.write("Result: ",a*b);
+document.write("Result: ",a/b);
+document.write("Result: ",a%b);
+
+var a = 60;
+a++;
+
+var b = 16;
+b++;
+
+document.write("Result: ",a)
+
+Control flow & Conditional statements
+if 
+if-Else
+if Else-if
+Switch
+var game = "Cricket"
+let captain = "Dhoni"
+if(game == "Cricket") {
+document.write("Match Captian is",captain);
+}
+if(game == "cricket") {
+document.write("Match Captian is",captain);
+} --> It is failed
+
+if(game == "cricket") {
+document.write("Match Captian is",captain);
+}
+else {
+document.write("Sorry Wrong answer");
+}
+
+0/p: Sorry wrong answer
+
+var game = "Cricket"
+let captain = "Dhoni"
+const tennis = "Sania"
+if(game == "cricket") {
+document.write("Match Captian is",captain);
+}
+else if(tennis == "Sania"){
+   document.write("Correct")
+}
+else {
+document.write("Sorry Wrong answer");
+}
+
+var x = 100;
+var y = 50;
+var z = 200;
+
+if(x !== y) {
+ document.write("x is equal to y");
+}
+else if(y < z){
+ document.write("blue color");
+}
+else if(z > x) {
+document.write("Yellow color")
+}
+else {
+document.write("All wrong statements");
+}
+
+
+Logical Operator
+
+1) logical NOT '!'
+2) Logical AND  '&&'
+3) logical OR   '||'
+
+&&
+t t t
+t f f
+f t f
+f f f
+
+||
+t t t
+t f t
+f t t
+f f f
+
+if(x !== y && y < z) {
+  document.write("yes correct answer");
+}
+else {
+document.write('wrong answer")
+}
+
+Ternary Operator
+
+document.write(2+3 == 5 ? "YES CORRECT ANSWER" : "no WRONG ANSWER")
+
+var x = 100;
+var y = 50;
+
+x < y ? document.write("color is green") : document.write("color is red")
+
+//dialog box
+
+alert
+prompt
+confirm
+
+alert("This is an alert)
+prompt("please enter your keyword")
+confirm("Are you sure")
+
+if(10<20) {
+alert("10 is less than 20')
+}
+
+var woman = confirm("Are you a woman") //everytime page loaded we will get that dialog
+
+if(woman) {
+let name = prompt("Please enter your name");
+document.write("Hello Madam. " + name + "Welcome to my page")
+}
+else {
+let name= prompt("Please enter your name");
+document.write("Hello Mr. " + name + "Welcome to my page")
+}
+
+Type Conversion
+
+var a = "55";
+var b = 44;
+
+document.write(typeof(a)); --> string
+
+var z = parseInt(a)
+document.write(typeof(z))
+
+var x = String(b)
+document.write(typeof(x) + "<br>")
+document.write(typeof(z))
+
+Switch case 
+
+switch(expression) {
+case value1:
+       statement
+        break;
+case  value 2:
+    statement;
+break;
+default:
+    default statement
+    break;
+}
+
+switch(true) {
+ case  10>20 : myexpression = "red color"
+  break;
+ case  20<30:  myAnswer = "green color"
+  break;
+ case  50>20: myAnswer = "black color"
+  break;
+case 100==200: 
+   myanswer = "orange color"
+  break;
+default: 
+   myanswer = "none of the above"
+  break;
+}
+document.write(myAnswer)
+
+//student results
+
+let Name=prompt("Please enter your name");
+let Marks = prompt("PlEASE ENTER YOUR MARKS");
+switch(true) {
+ case  Marks>90&& Marks<=100 :  result = "Great you are the topper"
+  break;
+case  Marks>65&& Marks<=90 :  result = "Congratulations you got First class"
+  break;
+ case  Marks>=40&& Marks<65 :  result = "you got second class"
+  break;
+case Marks>=30&& Marks<=40 :  result = "You got third class": 
+  break;
+default: 
+   result = "Please enter your marks"
+  break;
+}
+
+document.write("Hello" + Name + + "<h2>" + result + "</h2>")
+      
+
+functions
+function block /function body
+
+function apple() {
+document.write("Hello world" + "<br>")
+}
+apple(); --> we have to give parenthesis
+
+
+Scopes
+global scope
+function scope
+block scope
+
+Types of variables 
+
+1)Var 
+2)let
+3)Const
+
+Global scope
+var Apple = "red";
+let Orange = 'Yellow';
+const banana = "green"
+
+function fruit() {
+document.write(Apple);
+document.write(Orange);
+document.write(Banana);
+}
+fruit()
+
+function scope
+var Apple = "red";
+let Orange = 'Yellow';
+const banana = "green"
+
+function fruit() {
+    var x = 100;
+    let y = 200;
+    const z = 'mahesh';
+document.write(x);
+document.write(y);
+document.write(z);
+}
+fruit()
+
+function fruit() {
+    var x = 100;
+    let y = 200;
+    const z = 'mahesh';
+
+}
+document.write(x);
+document.write(y);
+document.write(z);
+//if we print outside the function we got error
+
+
+
+//Block scope
+
+function sports(){
+  if(10<20) {
+  var tennis = "sania"
+  let cricket = "virat"
+  const ground =  "stadium"
+  document.write(cricket)
+  document.write(ground)
+   }
+  document.write(tennis) 
+}
+sports()
+
+let and const --> block scoped --> if u try to print outside the block 
+we will get error
+tennis is function scoped
+
+global scope --> anywhere that variable we can use that variable anywhere
+function scope --> Inside function we declare variables we can use in function only wecan't use outside
+block scope --> Inside block we declare variables we can use in block only wecan't use outside  
+which varaibles we declare with let and const , outside the block it will not work
+but if we declare with var --> it will work outside block also.
+
+function expression
+
+var a = function apple() {
+ document.write("Red in  color");
+}
+a();
+
+Anonymous function --> without function name
+var b = function () {
+ document.write("This is Anonymous function");
+}
+b();
+
+//function with parameters and return value
+function score(a,b) {
+ return a+b+"<br>"
+}
+
+document.write(score(10,20))
+
+function game(x,y) {
+return document.write("I like" + x + "and " + y)
+}
+
+game("Cricket","Football");
+
+var userName= prompt(please enter your name")
+function guest(myFriend){
+return document.write("Hello welcome" +myFriend )
+}
+guest(userName);
+
+
+Methods
+
+ArrayMethods
+StringMethods
+ObjectMethpds
+
+Array methods 
+
+push()
+pop()
+shift()
+unshift()
+concat()
+join()
+slice()
+splice()
+indexOf()
+forEach()
+
+let collections = ["akash",55,true,{name:"Pratap"}]
+push() = ("Adds one or more elements to the end of the array and returns the new length.")
+let sports = ["cricket","football"]
+sports.push("socker",68)
+document.write(sports+ "<br>")
+document.write(sports.length + "<br>")
+
+
+pop method
+pop() = removes the last element from an array and returns that element")
+
+let books = ["Maths","Physics","chemistry"]
+let a = books.pop()
+
+
+document.write(books + "<br>") ==> maths,physics
+d
+document.write(a)
+
+shift method=(removes the first element from an array and returns that element)
+
+let states = ["hyd","mumbai","delhi"]
+states.shift();
+document.write(states)
+mumbai,hyderbad
+
+unshift = ('Adds one or more elements to the begining of an array and returns the new length")
+let scores = [22,56,89,105,"amar"]
+scores.unshift("suresh",26);
+document.write(scores+"<br>")
+
+concat() = ("combines two or more arrays and return a new array")
+let scores = [11,22,33,44]
+let players = ["amith","suresh","mahesh"]
+
+let newPlayers = scores.concat(players)
+document.write(newPlayers)
+
+join() ==> creates a new string by concatening all the elemnts 
+of an array and returns a string by a specified seperator
+
+var team = [10,20,30,"sunil","anil","madhav"]
+var myTeam = team.join("")
+document.write(myteam)
+
+var team = [10,20,30,"sunil","anil","madhav"]
+var myTeam = team.join("/")
+document.write(myteam)
+
+Slice method -->
+slice() = returns a shallow copy of a portion of an array into a new array
+
+let students = ["anil","balu","karthik",10,20,30,40,50]
+let myStudents = student.slice(0,4)
+document.write(myStudents) --> anil,balu,karthik
+
+splice method
+splice() = changes the contents of an array by removing ,replacing , or adding
+let myNUmbers = [0,1,2,3,4,5,6,7,8]
+let myNewNUmbers = myNumbers.splice(0,5) 
+document.write(myNumbers + "<br>" myNewNumbers)
+myNumbers --> 0,1,2,3,4
+MyNewNumbers --> 5,6,7,8
+
+let myNUmbers = [0,1,2,3,4,5,6,7,8]
+let myNewNUmbers = myNumbers.splice(0,4,"something to see") 
+document.write(myNumbers + "<br>")
+document.write(myNewNumbers)
+myNumbers --> something to see 4,5,6,7,8
+MyNewNumbers --> 0,1,2,3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
