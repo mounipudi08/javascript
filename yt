@@ -618,9 +618,37 @@ let newString = str.replace("world","Javascript")
 console.log(newStr) //Hello javascript
 toUpperCase() -
 let text = "Hello World!"
-let result = text.toUpperCase();
-console.log(result) //HELLO WORLD
-toLowerCase()
+let result = text.toUpperCase();HELLO WORLD
+
+let text = "Hello World!"
+let result = text.toLowerCase();
+console.log(result) / hello world
+
+loops
+-- Repetition and automation
+    Iterating over data
+    control flow
+    data manipulation
+
+loops five types
+
+--> for
+   while 
+   do-while
+   forEach
+   for-In
+
+  for(a=5;a<=10;a++/a--) 
+Initialization
+Condition
+Increment or decrement
+
+for(var a=0;a<10;a++) {
+  document.write('I love India" + "<br>");
+}
+
+
+
 
 
    
