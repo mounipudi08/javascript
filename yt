@@ -1,1 +1,54 @@
+javascript is a high-level programming language 
+primarily used for creating interactive and dynamic web pages
+javascript runs on the client side ,and executed by the user's web browser
+computer --> machine understand language --> binary code --> 
+programming language --> machine will not understand
+what we wrote --> using browser --> browser have javascript engine
+what we wrote --> it will convert into binary code --> it will input to the computer
+computer --> process that code --> it will display the output 
+
+programming languages --> like C ,C++,java,python(general purpose programming language)
+difference between them 
+javascript --> client side programming language 
+
+ C ,C++,java,python(general purpose programming language)
+difference between them  --> we can't see the output directly
+If u want to see these outputs javascript is necessary
+javascript take help by browser to display the content
+javascript --> outputs --> we can see immediately --> in the browser
+
+Advantages in javascript
+we can create full stack application(frontend and backend)  by using javascript
+we can develop web application and mobile application by using javascript
+(indeed) --> job portal
+
+javascript libraries & framw works 
+
+1) front end library
+react
+angular
+vue
+react native
+
+2) backend
+ExpressJS
+NextJs
+GatsbyJs
+NuxtJs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
