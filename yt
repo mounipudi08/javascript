@@ -516,6 +516,133 @@ myNumbers --> something to see 4,5,6,7,8
 MyNewNumbers --> 0,1,2,3
 
 
+let myNUmbers = [0,1,2,3,4,5,6,7,8]
+let myNewNUmbers = myNumbers.splice(4,1,"Stars in sky") 
+document.write(myNumbers + "<br>") // 0 ,1 ,2,3, stars in the sky,5,6,7,8
+document.write(myNewNumbers) // 4
+
+let myNUmbers = [0,1,2,3,4,5,6,7,8]
+let myNewNUmbers = myNumbers.splice(4,3,"Stars in sky") 
+document.write(myNumbers + "<br>") //  0,1,2,3,Stars in sky , 7 , 8
+document.write(myNewNumbers) // 4 5 6
+
+let myNUmbers = [0,1,2,3,4,5,6,7,8]
+let myNewNUmbers = myNumbers.splice(3,1,"Added Value") 
+document.write(myNumbers + "<br>") //  0,1,2,Added Value,4,5,6 7 , 8
+document.write(myNewNumbers) // 3
+
+IndexOf() = Returns the first index at which a given element can be found in the array , -1 if it is not present
+
+let students = ["Anil","Banti","Suresh","Girish"]
+document.write(students.indexOf("Suresh")) --> 2
+document.write(students.indexOf("Ramesh")) --> -1
+
+var newStudent = students.indexOf("Satish")
+if(newStudent == -1) {
+students.push("Satish")
+}
+document.write("students")
+
+forEach() = "Executes a provided function  once for each array element)
+
+let scores = [10,20,30,40,50,60]
+let students = ["Suresh","murali","mouni","kesava"]
+
+document.write(students) // Suresh,murali,mouni,kesava 
+document.write(students + "<br>") It will continue in row but will not form column
+
+students.forEach(function(item,index) { // item will travel on array
+     document.write(index+1 + "." +item+"<br>") // sureshmuralimounikesava
+})
+1.Suresh
+2.murali
+3.nagaraju
+4.harish
+
+if we call one method in another function 
+that process is called callback function
+
+callback function: A function called as a paramater inside a function or method is called
+callback function
+
+let scores = [10,20,30,40,50,60]
+scores.forEach(function(item){
+  document.write(item*2 + "<br>")
+ }) 
+     
+Multi dimension Array
+
+let students = ["anil","sunil","banti"]
+document.write("My student is:",students[2])
+
+let marks = [
+    [10,20,30],
+    [40,50,60,70],
+    [80,90,]
+    [100,110,120,140]
+]
+document.write(marks[1][1])
+document.write(marks[3][3])
+
+String methods()
+  split()
+  replace()
+  trim()
+  toUpperCase()
+  charAt()
+  toLowerCase()
+  substring()
+
+split() -- 
+
+var sample = "This is a string sample text"
+
+document.write(sample.split(""))
+
+//T,h,i,s, i , s a , s, t,r,i,n,g,s,a,m,p,l,e,t,e,x,t -- string is converted to array
+document.write(sample.split(" "))
+[this,is,a,string,sample,text]
+
+var student = "      ramesh     "
+document.write(student)
+console.log(student.trim())
+
+var student = "ramesh"
+charAt() --> document.write(student.charAT(5));
+substring()
+let str = "Hello, World!"
+let result = str.substring(7,5) //world
+replace() --
+let str = "Hello,world!"
+let newString = str.replace("world","Javascript")
+console.log(newStr) //Hello javascript
+toUpperCase() -
+let text = "Hello World!"
+let result = text.toUpperCase();
+console.log(result) //HELLO WORLD
+toLowerCase()
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
