@@ -1187,6 +1187,114 @@ document.write(calculation)
 const calculation = Math.floor(-10) --> // 10
 document.write(calculation)
 
+const calculation = Math.floor(10.01)
+document.write(calculation) --> 10
+
+const calculation = Math.floor(11.99)
+document.write(calculation) --> 11
+
+
+const calculation = Math.round(11.53) //It will more than 50
+document.write(calculation) --> 12
+
+
+const calculation = Math.max(12,55,890,558,2)
+document.write(calculation) --> 890
+
+
+const calculation = Math.min(12,55,890,558,11545)
+document.write(calculation) --> 12
+
+const calculation = Math.random()*10
+document.write(calculation) 
+
+const calculation = Math.floor(Math.random()*10)+1
+document.write(calculation)
+
+
+Objects
+
+what are objects-->data type
+
+array is started with square brackets
+const sampleArray = ["Apple","Mango","Banana",true,55]
+document.write(sampleArray[1])
+
+const capitals = {
+   India: "New Delhi",
+   Telangana:"Hyderabad",
+   maharstra: "Mumbai",
+   location:function() {
+   return "I live in "+ this.telangana
+   }
+}
+capitals.maharastra = "Bombay"
+document.write(capitals.maharastra)
+
+capitals.area = "Ameerpet"
+
+const fruits = new Object()
+console.log(fruits)//object
+
+fruits.apple = "red"
+fruits.mango = "yellow"
+
+console.log(fruits)
+
+document.write(fruits.apple)
+
+Set and clear Intervals
+
+setInterval() --> when we want to perform a task at particular 			time it will be useful
+
+setInterval(functionName,milliseconds)
+
+1000ms = 1sec
+
+const Animator = setInterval(sampleAnimation,1000ms)
+let a = 0;
+function sampleAnimation(){
+   a = a+1;
+   if(a == 5) {
+   const textAnimation = document.getElementById("title")
+   textAnimation.style.fontsize = a + "rem"
+   }
+}
+
+const Animator = setInterval(sampleAnimation,1000ms) //how much time we pass that much time , function will perform)
+let a = 0;
+function sampleAnimation(){
+   a = a+1;
+   if(a == 5) {
+    clearInterval(Animator)
+   } else{
+   const textAnimation = document.getElementById("title")
+   textAnimation.style.fontsize = a + "rem"
+  }
+}
+
+set & clear Timeouts
+
+setTimeout()
+setTimeout(functionName,milliseconds) //we delay the action
+
+const changer = setTimeout(function(){
+    const myElement = document.getElementById("title")
+    myElement.style.color = "red"
+     myElement.style.fontSize="5rem"
+},5000)
+
+clearTimeout(identifier)
+
+
+<button id="stop" onclick="stopAction()">Stop Action</button>
+
+
+function stopAction() {
+clearTimeout(changer)
+}
+
+
 
 
 
