@@ -647,6 +647,529 @@ for(var a=0;a<10;a++) {
   document.write('I love India" + "<br>");
 }
 
+Methods 
+
+getElementById()
+getElementsByClassName()
+getElementsByTagName()
+querySelector()
+querySelectorAll()
+setAttribute()
+removeAttribute()
+
+properties
+
+innerText
+innerHTML
+textContent
+value
+name
+attributes
+getAttribute
+setAttribute
+
+
+
+
+document.getElementById("company")
+
+document.getElementsByClassName("nav-left")
+
+document.getElementsByTagName("nav")
+
+In css
+
+#company {
+   color: blue;
+}
+
+
+QUERYSELECTOR
+
+document.querySelector("#company")
+
+query selectors --> we pass --> css selectors
+
+
+
+const newCompany = document.querySelector("#company") here company is id 
+
+newCompany.textContent = "Amazon"
+
+
+
+
+
+const newCompany = document.querySelector(".nav-left")  // here we select      								the class
+
+newCompany.textContent= "Flipkart"
+
+
+
+
+const newCompany = document.querySelector("div") //It will select first 							element
+
+newCompany.textContent = "Jio Mart"
+
+
+const newCompany = document.querySelectorAll("li") //It will give all list 							of all li tags
+for(let x=0;x<newCompany.length;x++) {
+  newCompany[x] .textContent = "Employees" 
+} // wherever li tags it will changed to employees
+
+If I want to change only customers --> 
+
+const newCompany = document.querySelectors(".customers")
+for(let x=0;x<newCompany.length;x++) {
+  newCompany[x] .textContent = "Employees" 
+} //wherever customers is there it will replace to employees
+
+
+
+<p> This is a result: <span style="display:none;">Success </span> fail</p>
+
+
+
+const targetHidden = document.querySelector("p")
+console.log(targetHidden.innerText) --> if we use this it will select both 					text and css
+
+
+const targetHidden = document.querySelector("p")
+console.log(targetHidden.textContent) --> if we use this it will select 						only text 
+
+
+
+Attributes
+
+Types of HTML ATTRIBUTES
+
+href Attribute,
+width and height Attribute
+src Attribute
+id Attribute
+class Attributes
+style attribute
+alt Attribute
+lang attribute
+dir attribute
+
+<header id="headerId" class="headerClass" style="color:transparent" href="/">
+
+const targetingAtt = document.querySelector("header").attributes 
+console.log(targettingAtt);
+it will give all attributes in header
+
+const targetingAtt = document.querySelector("header").attributes.id
+console.log(targettingAtt);
+
+//it will give attribute of id
+
+
+const targetingAtt = document.querySelector("header").attributes.id.value
+console.log(targettingAtt);
+
+//it will give value  of id
+
+
+const targetingAtt = document.querySelector("header").attributes.id.name
+console.log(targettingAtt);
+
+//it will give vid
+
+
+const targetingAtt = document.querySelector("header").attributes.class.name
+console.log(targettingAtt);
+
+//it will give class
+
+const targetingAtt = document.querySelector("header").attributes.class.value
+console.log(targettingAtt);
+
+//it will give headerClass
+
+const targetingAtt = document.querySelector("header").attributes.style.value
+console.log(targettingAtt);
+
+//it will give color:transparent
+
+
+
+const targetingAtt = document.querySelector("header").attributes.href.value
+console.log(targettingAtt);
+
+//  /
+
+
+
+setAttribute()
+
+const  targetNav = document.querySelector("nav")
+
+targetNav.setAttribute("style","border:5px solid black"))
+
+
+
+const targetSide = document.querySelector(".sidenav")
+
+targetSide.setAttribute("style","background-color: green")
+
+
+
+removeAttribute()
+
+const targetRemove = document.querySelector(".main")
+
+targetRemove.removeAttribute("class")
+
+CSS in js
+
+document.querySelector("header").style.backgroundColor = "red"
+
+
+
+Events & Event Listeners
+
+
+1) Mouse Events 
+
+click
+dbclick(double click)
+mouseover
+mouseout
+mouseenter
+mouseleave
+mousedown
+mouseup
+
+
+2)keyboard Events
+
+keydown
+keyup
+keypress
+
+3)Form Events
+submit
+reset
+focus
+blur
+change
+input
+
+Events 
+
+const darkTheme = function() {
+document.querySelector("body").style.backgroundColor = "black"
+document.querySelector(".dark-theme").textContent = "Light Theme"
+document.querySelector("header").style.backgroundColor="#2E282A"
+document.querySelector(".sidenav").style.backgroundColor="#808A9F"
+
+}
+<div class="dark-theme" onclick=darkTheme() ondblclick=lightTheme()>
+DarkTheme
+</div>
+
+function eleHover(element){
+element.style.backgroundColor = "yellow"
+}
+
+<div class="main">
+<div class="section revenue" onmouseover="eleHover(this)" onmouseout="eleOut(this)">
+<h2 class="customers">Customers</h2>
+</div>
+
+this will represent that particular element
+
+event --> we write in particular element we write the event and we assign to the function 
+
+
+event listeners
+
+
+two ways
+
+1)getElementById("exampleId").onclick = functionName
+
+function functionName(){
+exampleId.style.backgroundColor="red"
+}
+
+2)addEventListeners
+
+getElementById("exampleId").addEventListener('click',functionName)
+
+function functionName(){
+exampleId.style.backgroundColor="red"
+}
+
+
+const sideNavBar = document.querySelector(".sidenav")
+const mainSection = document.querySelectorAll(".main.section")
+
+loginButton.onclick = showLogin
+
+function showLogin() {
+sideNavBar.style.display="None"
+mainSection.forEach(function(item) {
+ item.style.display = "none"
+})
+loginModal.style.display = "block"
+}
+
+
+document.getElementById("closeBtn").addEventListener('click',hideLogin)
+
+
+ function hideLogin() {
+sideNavBar.style.display = "block"
+mainSection.forEach(function(item) {
+item.style.display = "block"
+}}
+loginModal.style.display = "none"
+}
+
+for addeventListeners no need to write on 
+normal events we have to write on
+
+
+document.getElementById("loginSubmit").addEventListener('mouseover',
+function() {
+this.style.backgoundColor='green'
+})
+
+document.getElementById("loginSubmit").addEventListener('mouseout',
+function() {
+this.style.backgoundColor='#1768AC'
+})
+
+<button id="add-border">Add border</button>
+const Navborder = getElementById("add-border")
+NavBar.addEventListener("click",addingBorder)
+
+function addingBorder() {
+document.querySelector("header").style.border="5px solid black"
+}
+
+if(10<20)
+{
+NavBorder.removeEventListener("click",addingBorder)
+}
+
+
+FormEvents
+
+<form id="myForm">
+<label for="nameInput">Name:</label>
+<input type="text" id=nameInput" placeholder="Enter your name">
+<button type="submit">Submit</button>
+</form>
+<div class="user-details">
+<h3>UserDetails:</h3>
+<h2 id="name" style="color:blue"></h2>
+</div>
+
+
+const mainForm = document.getElementById("myForm")
+const username = document.getElementById("nameInput")
+const inputName= document.getElementById("name")
+
+
+mainForm.addEventListener('submit',function(e) {
+e.preventDefault() --> when we enter the data when we click submit it will 				load the page , and data will remove
+const myUserName = username.value
+inputName.textContent = myUserName
+
+
+mainForm.reset()
+})
+
+focus and blur
+
+
+const userInput = getElementById("nameInput")
+userInput.addEventListener("focus",function(event) {
+        console.log(event. target) //when we pass the target it will return the element
+})
+
+const userInput = getElementById("nameInput")
+userInput.addEventListener("focus",function(event) {
+event.target.style.backgroundColor='pink'   
+      })
+
+
+const userInput = document.getElementById("nameInput")
+userInput.addEventListener("blur",function(event) {
+event.target.style.background = ''
+
+})
+
+
+
+<select id="myColors">
+   <option value="red">Red</option>
+   <option value="green">Green</option>
+   <option value="blue">Blue</option>
+</select>
+
+<div id="box">
+  
+</div>
+
+#myColors {
+  width:200px;
+  font-size:large; 
+  margin-left:300px;
+}
+#box{
+  width:200px;
+  height:200px;
+  border: 1px solid gray;
+  margin-left:500px;
+}
+
+const myNewColors = document.getElementById("myColors")
+const myNewBox = document.getElementById("box")
+
+myNewColors.addEventListener("change",function() {
+  myNewBox.style.background = myNewColor.value
+}) //which color we select it will display in box
+
+myNewColors.addEventListener("change",function() {
+  myNewBox.textContent = myNewColor.value
+})which color  we select that text   will display in box 
+
+//
+
+input event
+
+mainForm.addEventListener('input',function(e){
+  e.preventDefault
+  const myUserName = username.value;
+  inputName.textContent = myUserName
+
+})
+
+
+ClassList
+
+classList is a property of DOM elements that represents a collection of classes applied to the element.
+
+methods --> add --> To element it will add a new class 
+             remove --> it will remove existing element and it will remove  
+                        add element
+             toggle  --> if once click ->it will show other time we click 			it will hide
+             
+
+            contains ---> whatever we assumed that class will be there in 
+                          classList --> return true
+                          or else false
+
+             replace  --> it will the replace the class with existing class
+
+
+
+<button id="open">Open Sidebar</button>
+<button id="close">Close Sidebar</button>
+
+const openNav = document.getElementById("open")
+const closeNav = document.getElementByID("close")
+
+const sideNavBar = document.querySelector(".sidenav")
+
+closeNav.addEventListener('click',closeSideNavBar) 
+
+function closeSideNavBar(){
+ sideNavBar.classList.add("apple")
+ document.querySelector(".apple").style.display='none'
+}
+
+openNav.addEventListener('click',openSideNavBar)
+function openSideNavBar() {
+sideNavBar.style.display = 'block'
+}
+
+
+Remove 
+
+const openNav = document.getElementById("open")
+const closeNav = document.getElementByID("close")
+
+const sideNavBar = document.querySelector(".sidenav")
+
+closeNav.addEventListener('click',closeSideNavBar) 
+
+function closeSideNavBar(){
+ sideNavBar.classList.remove("sidenav") //It will remove the class
+}
+
+
+ToggleList
+
+const openNav = document.getElementById("open")
+const closeNav = document.getElementByID("close")
+
+const sideNavBar = document.querySelector(".sidenav")
+
+closeNav.addEventListener('click',closeSideNavBar) 
+
+function closeSideNavBar(){
+ sideNavBar.classList.toggle("mango") //when we click first time it will show  sidenavbar , when we click secondtime it will not show sidenavbar
+because of toggle it will add class sidenavbar mango , bcoz of mango we kept display: none that sidebar will not display
+}
+
+.mango {
+  display:none;
+}
+
+
+Contains 
+
+The classList.contains method in JavaScript is used to check if an element contains a specific class. It returns true if the class is present and false otherwise.
+
+Example
+
+const div = document.querySelector('div');
+console.log(div.classList.contains('secondary')); // true
+
+
+replace
+
+Date method
+
+var Example = new Date()
+
+ getDate()
+ getMonth()
+ getFullYear()
+ getHours()
+ getMinutes()
+ getSeconds()
+
+setDate()
+setMonth()
+setFullYear()
+setHours()
+setMinutes()
+setSecinds()
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+    
+
+
+
 
 
 
