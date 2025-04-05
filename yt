@@ -1153,6 +1153,53 @@ setMinutes()
 setSecinds()
 
 
+Date method 
+
+var example = new Date()
+
+const today = new Date()
+document.write(toDay.getDate())
+document.write(toDay.getMonth()+1) --> zeroIndexed
+document.write(toDay.getfullYear()) --> 2023
+
+const toDay = new Date()
+toDay.setDate(10)
+toDay.setMonth(10)
+toDay.setFullYear(2024)
+
+Math Methdos
+
+.Math() --> min ,max ,random
+
+Math.ceil()
+Math.floor()
+Math.round()
+Math.max()
+Math.min()
+Math.random()
+
+const calculation = Math.ceil(10.01) --> // 11
+document.write(calculation)
+
+const calculation = Math.floor(10.53) --> // 10
+document.write(calculation)
+
+const calculation = Math.floor(-10) --> // 10
+document.write(calculation)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
