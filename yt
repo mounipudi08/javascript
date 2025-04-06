@@ -731,11 +731,11 @@ for(let x=0;x<newCompany.length;x++) {
 
 
 const targetHidden = document.querySelector("p")
-console.log(targetHidden.innerText) --> if we use this it will select both 					text and css
+console.log(targetHidden.innerText) --> if we use this it will select both 	text and css
 
 
 const targetHidden = document.querySelector("p")
-console.log(targetHidden.textContent) --> if we use this it will select 						only text 
+console.log(targetHidden.textContent) --> if we use this it will select only text 
 
 
 
